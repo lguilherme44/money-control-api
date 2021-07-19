@@ -1,0 +1,25 @@
+{
+  "name": "money-control-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "eslinty": "yarn eslint --fix src --ext .js",
+    "build": "sucrase ./src -d ./build --transforms imports && npx sequelize db:migrate",
+    "start": "node ./build/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "sqlite3": "^5.0.2",
+    "sucrase": "^3.20.0",
+    "sequelize-cli": "^6.2.0"
+  }
+}
